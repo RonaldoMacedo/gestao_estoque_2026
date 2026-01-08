@@ -37,6 +37,11 @@ public class Teste {
 		System.out.print("CNPJ: ");
 		b.cnpj = sc.next();
 		
+		System.out.println();
+		
+		System.out.println(a);
+		System.out.println(b);
+		
 		sc.close();
 
 	}
