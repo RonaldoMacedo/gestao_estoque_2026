@@ -21,6 +21,9 @@ public class Teste {
 		sc.nextLine();
 		System.out.print("Descrição interna: ");
 		a.descricaoInterna = sc.nextLine();
+		System.out.print("Entrada: ");
+		int qtdA = sc.nextInt();
+		a.entrada(qtdA);
 		
 		System.out.print("\nDigite os dados do produto b: ");
 		System.out.print("ID: ");
@@ -28,6 +31,9 @@ public class Teste {
 		sc.nextLine();
 		System.out.print("Descrição interna: ");
 		b.descricaoInterna = sc.nextLine();
+		System.out.print("Entrada: ");
+		int qtdB = sc.nextInt();
+		b.entrada(qtdB);
 		
 		System.out.println();
 		
