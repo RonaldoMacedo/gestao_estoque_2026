@@ -2,7 +2,7 @@ package application;
 
 import java.util.Scanner;
 
-import model.entities.Produto;
+import model.entities.Item;
 
 public class Teste {
 
@@ -10,35 +10,30 @@ public class Teste {
 		
 		Scanner sc = new Scanner(System.in);
 		
-		Produto a, b;
+		Item item;
 		
-		a = new Produto();
-		b = new Produto();
+		item = new Item();
 		
-		System.out.println("Digite os dados do produto a:");
-		System.out.print("ID: ");
-		a.idProduto = sc.nextInt();
+		System.out.println("Entre com os dados do item:");
+		System.out.print("Código: ");
+		item.idItem = sc.nextInt();
+		System.out.print("Descrição: ");
 		sc.nextLine();
-		System.out.print("Descrição interna: ");
-		a.descricaoInterna = sc.nextLine();
-		System.out.print("Entrada: ");
-		int qtdA = sc.nextInt();
-		a.entrada(qtdA);
+		item.descricao = sc.nextLine();
+		System.out.print("Código ref: ");
+		item.codigoREF = sc.next();
+		System.out.print("Código de barras: ");
+		item.codigoBarras = sc.next();
 		
-		System.out.print("\nDigite os dados do produto b: ");
-		System.out.print("ID: ");
-		b.idProduto = sc.nextInt();
-		sc.nextLine();
-		System.out.print("Descrição interna: ");
-		b.descricaoInterna = sc.nextLine();
-		System.out.print("Entrada: ");
-		int qtdB = sc.nextInt();
-		b.entrada(qtdB);
+		System.out.print("Entrada (s/n)? ");
+		char entrada = sc.next().charAt(0);
 		
-		System.out.println();
+		if(entrada == 's' || entrada == 'S') {
+			System.out.print("Quantidade de entrada: ");
+			item.quantidade = sc.nextInt();
+		}
 		
-		System.out.println(a);
-		System.out.println(b);
+		System.out.println(item);
 		
 		sc.close();
 
