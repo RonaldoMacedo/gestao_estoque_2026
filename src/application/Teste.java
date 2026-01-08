@@ -2,7 +2,7 @@ package application;
 
 import java.util.Scanner;
 
-import model.entities.Fornecedor;
+import model.entities.Produto;
 
 public class Teste {
 
@@ -10,32 +10,24 @@ public class Teste {
 		
 		Scanner sc = new Scanner(System.in);
 		
-		Fornecedor a, b;
+		Produto a, b;
 		
-		a = new Fornecedor();
-		b = new Fornecedor();
+		a = new Produto();
+		b = new Produto();
 		
-		System.out.println("Entre com os dados do fornecedor a:");
+		System.out.println("Digite os dados do produto a:");
 		System.out.print("ID: ");
-		a.idFornecedor = sc.nextInt();
+		a.idProduto = sc.nextInt();
 		sc.nextLine();
-		System.out.print("Razão social: ");
-		a.razaoSocial = sc.nextLine();
-		System.out.print("Apelido: ");
-		a.apelido = sc.nextLine();
-		System.out.print("CNPJ: ");
-		a.cnpj = sc.next();
+		System.out.print("Descrição interna: ");
+		a.descricaoInterna = sc.nextLine();
 		
-		System.out.println("\nEntre com os dados do fornecedor b:");
+		System.out.print("\nDigite os dados do produto b: ");
 		System.out.print("ID: ");
-		b.idFornecedor = sc.nextInt();
+		b.idProduto = sc.nextInt();
 		sc.nextLine();
-		System.out.print("Razão social: ");
-		b.razaoSocial = sc.nextLine();
-		System.out.print("Apelido: ");
-		b.apelido = sc.nextLine();
-		System.out.print("CNPJ: ");
-		b.cnpj = sc.next();
+		System.out.print("Descrição interna: ");
+		b.descricaoInterna = sc.nextLine();
 		
 		System.out.println();
 		
