@@ -26,9 +26,9 @@ public class Teste {
 		item.codigoBarras = sc.next();
 		
 		System.out.print("Entrada (s/n)? ");
-		char entrada = sc.next().charAt(0);
+		char entrada = sc.next().toLowerCase().charAt(0);
 		
-		if(entrada == 's' || entrada == 'S') {
+		if(entrada == 's') {
 			System.out.print("Quantidade de entrada: ");
 			item.quantidade = sc.nextInt();
 		}
