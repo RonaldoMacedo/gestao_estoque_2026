@@ -10,20 +10,18 @@ public class Teste {
 		
 		Scanner sc = new Scanner(System.in);
 		
-		Item item;
-		
-		item = new Item();
-		
 		System.out.println("Entre com os dados do item:");
 		System.out.print("Código: ");
-		item.idItem = sc.nextInt();
+		int id = sc.nextInt();
 		System.out.print("Descrição: ");
 		sc.nextLine();
-		item.descricao = sc.nextLine();
+		String descricao = sc.nextLine();
 		System.out.print("Código ref: ");
-		item.codigoREF = sc.next();
+		String codigoREF = sc.next();
 		System.out.print("Código de barras: ");
-		item.codigoBarras = sc.next();
+		String codigoBarras = sc.next();
+		
+		Item item = new Item(id, descricao, codigoREF, codigoBarras, 0);
 		
 		System.out.print("Entrada (s/n)? ");
 		char entrada = sc.next().toLowerCase().charAt(0);

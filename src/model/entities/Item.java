@@ -8,6 +8,15 @@ public class Item {
 	public String codigoBarras;
 	public int quantidade;
 	
+	public Item(Integer idItem, String descricao, String codigoREF, String codigoBarras, int quantidade) {
+
+		this.idItem = idItem;
+		this.descricao = descricao;
+		this.codigoREF = codigoREF;
+		this.codigoBarras = codigoBarras;
+		this.quantidade = quantidade;
+	}
+
 	public void entrada(int quantidade) {
 		this.quantidade += quantidade;
 	}
