@@ -30,7 +30,19 @@ public class Teste {
 		
 		if(entrada == 's') {
 			System.out.print("Quantidade de entrada: ");
-			item.quantidade = sc.nextInt();
+			int qtd = sc.nextInt();
+			item.entrada(qtd);
+		}
+		
+		System.out.println(item);
+		
+		System.out.print("Saída (s/n)? ");
+		char saida = sc.next().toLowerCase().charAt(0);
+		
+		if(saida == 's') {
+			System.out.print("Quantidade de saída: ");
+			int qtd = sc.nextInt();
+			item.saida(qtd);
 		}
 		
 		System.out.println(item);
