@@ -2,6 +2,7 @@ package application;
 
 import java.util.Scanner;
 
+import model.entities.Fornecedor;
 import model.entities.Produto;
 
 public class Teste {
@@ -10,14 +11,22 @@ public class Teste {
 		
 		Scanner sc = new Scanner(System.in);
 		
-		System.out.println("Entre com os dados do produto:");
+		System.out.println("Entre com os dados do fornecedor:");
 		System.out.print("Código: ");
 		int id = sc.nextInt();
-		System.out.print("Descrição: ");
-		String descricao = sc.nextLine();
+		System.out.print("Razão social: ");
 		sc.nextLine();
+		String razao = sc.nextLine();
+		System.out.print("Apelido: ");
+		String apelido = sc.nextLine();
+		System.out.print("CNPJ: ");
+		String cnpj = sc.next();
 		
-		Produto produto = new Produto(id, descricao, 0);
+		Fornecedor fornecedor = new Fornecedor(id, razao, apelido, cnpj);
+		
+		System.out.println(fornecedor);
+		
+		/*System.out.println();
 		
 		System.out.print("Entrada (s/n)? ");
 		char entrada = sc.next().toLowerCase().charAt(0);
@@ -39,7 +48,7 @@ public class Teste {
 			produto.saida(qtd);
 		}
 		
-		System.out.println(produto);
+		System.out.println(produto);*/
 		
 		sc.close();
 
