@@ -6,6 +6,13 @@ public class Produto {
 	public String descricaoInterna;
 	public int quantidade;
 	
+	public Produto(Integer idProduto, String descricaoInterna, int quantidade) {
+
+		this.idProduto = idProduto;
+		this.descricaoInterna = descricaoInterna;
+		this.quantidade = quantidade;
+	}
+
 	public void entrada(Integer quantidade) {
 		this.quantidade += quantidade;
 	}

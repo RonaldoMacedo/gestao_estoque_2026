@@ -2,7 +2,7 @@ package application;
 
 import java.util.Scanner;
 
-import model.entities.Item;
+import model.entities.Produto;
 
 public class Teste {
 
@@ -10,18 +10,14 @@ public class Teste {
 		
 		Scanner sc = new Scanner(System.in);
 		
-		System.out.println("Entre com os dados do item:");
+		System.out.println("Entre com os dados do produto:");
 		System.out.print("Código: ");
 		int id = sc.nextInt();
 		System.out.print("Descrição: ");
-		sc.nextLine();
 		String descricao = sc.nextLine();
-		System.out.print("Código ref: ");
-		String codigoREF = sc.next();
-		System.out.print("Código de barras: ");
-		String codigoBarras = sc.next();
+		sc.nextLine();
 		
-		Item item = new Item(id, descricao, codigoREF, codigoBarras, 0);
+		Produto produto = new Produto(id, descricao, 0);
 		
 		System.out.print("Entrada (s/n)? ");
 		char entrada = sc.next().toLowerCase().charAt(0);
@@ -29,10 +25,10 @@ public class Teste {
 		if(entrada == 's') {
 			System.out.print("Quantidade de entrada: ");
 			int qtd = sc.nextInt();
-			item.entrada(qtd);
+			produto.entrada(qtd);
 		}
 		
-		System.out.println(item);
+		System.out.println(produto);
 		
 		System.out.print("Saída (s/n)? ");
 		char saida = sc.next().toLowerCase().charAt(0);
@@ -40,10 +36,10 @@ public class Teste {
 		if(saida == 's') {
 			System.out.print("Quantidade de saída: ");
 			int qtd = sc.nextInt();
-			item.saida(qtd);
+			produto.saida(qtd);
 		}
 		
-		System.out.println(item);
+		System.out.println(produto);
 		
 		sc.close();
 
